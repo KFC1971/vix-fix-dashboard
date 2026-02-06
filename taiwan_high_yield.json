@@ -1,0 +1,752 @@
+[
+  {
+    "Ticker": "1713.TW",
+    "Name": "國化",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2603.TW",
+    "Name": "長榮",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5508.TW",
+    "Name": "永信建",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2609.TW",
+    "Name": "陽明",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6606.TW",
+    "Name": "建德工業",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1463.TW",
+    "Name": "強盛新",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2228.TW",
+    "Name": "劍麟",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "9906.TW",
+    "Name": "欣巴巴",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "9927.TW",
+    "Name": "泰銘",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5209.TW",
+    "Name": "新鼎",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5519.TW",
+    "Name": "隆大",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2545.TW",
+    "Name": "皇翔",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2348.TW",
+    "Name": "海悅",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1446.TW",
+    "Name": "宏和",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6026.TW",
+    "Name": "福邦證",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2751.TW",
+    "Name": "王座",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2496.TW",
+    "Name": "卓越",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1436.TW",
+    "Name": "華友聯",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1806.TW",
+    "Name": "冠軍",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4909.TW",
+    "Name": "新復興",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4137.TW",
+    "Name": "麗豐-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6180.TW",
+    "Name": "橘子",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2611.TW",
+    "Name": "志信",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1475.TW",
+    "Name": "業旺",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4420.TW",
+    "Name": "光明",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2387.TW",
+    "Name": "精元",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6021.TW",
+    "Name": "美好證",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5515.TW",
+    "Name": "建國",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6216.TW",
+    "Name": "居易",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5356.TW",
+    "Name": "協益",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2020.TW",
+    "Name": "美亞",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4933.TW",
+    "Name": "友輝",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4162.TW",
+    "Name": "智擎",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8442.TW",
+    "Name": "威宏-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8433.TW",
+    "Name": "弘帆",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2637.TW",
+    "Name": "慧洋-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6523.TW",
+    "Name": "達爾膚",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "9935.TW",
+    "Name": "慶豐富",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3356.TW",
+    "Name": "奇偶",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6292.TW",
+    "Name": "迅德",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5225.TW",
+    "Name": "東科-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2851.TW",
+    "Name": "中再保",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6177.TW",
+    "Name": "達麗",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6924.TW",
+    "Name": "榮惠-KY創",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2852.TW",
+    "Name": "第一保",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6486.TW",
+    "Name": "互動",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8436.TW",
+    "Name": "大江",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1307.TW",
+    "Name": "三芳",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6596.TW",
+    "Name": "寬宏藝術",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2109.TW",
+    "Name": "華豐",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6212.TW",
+    "Name": "理銘",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8446.TW",
+    "Name": "華研",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6957.TW",
+    "Name": "裕慶-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6703.TW",
+    "Name": "軒郁",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2204.TW",
+    "Name": "中華",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2916.TW",
+    "Name": "滿心",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6248.TW",
+    "Name": "沛波",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2527.TW",
+    "Name": "宏璟",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1537.TW",
+    "Name": "廣隆",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2530.TW",
+    "Name": "華建",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6904.TW",
+    "Name": "伯鑫",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1582.TW",
+    "Name": "信錦",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4550.TW",
+    "Name": "長佳",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4735.TW",
+    "Name": "豪展",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3481.TW",
+    "Name": "群創",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6176.TW",
+    "Name": "瑞儀",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6996.TW",
+    "Name": "力領科技",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4736.TW",
+    "Name": "泰博",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6128.TW",
+    "Name": "上福",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8182.TW",
+    "Name": "加高",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6171.TW",
+    "Name": "大城地產",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2062.TW",
+    "Name": "橋椿",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3171.TW",
+    "Name": "炎洲流通",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "7718.TW",
+    "Name": "友鋮",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "7705.TW",
+    "Name": "三商餐飲",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1341.TW",
+    "Name": "富林-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3209.TW",
+    "Name": "全科",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1442.TW",
+    "Name": "名軒",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2850.TW",
+    "Name": "新產",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "7715.TW",
+    "Name": "裕山",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8916.TW",
+    "Name": "光隆",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2010.TW",
+    "Name": "春源",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8482.TW",
+    "Name": "商億-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3679.TW",
+    "Name": "新至陞",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6757.TW",
+    "Name": "台灣虎航",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8049.TW",
+    "Name": "晶采",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2393.TW",
+    "Name": "億光",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3526.TW",
+    "Name": "凡甲",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5534.TW",
+    "Name": "長虹",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6903.TW",
+    "Name": "巨漢",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1315.TW",
+    "Name": "達新",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6161.TW",
+    "Name": "捷波",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8091.TW",
+    "Name": "翔名",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3501.TW",
+    "Name": "維熹",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "9960.TW",
+    "Name": "邁達康",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6005.TW",
+    "Name": "群益證",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2762.TW",
+    "Name": "世界健身-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6577.TW",
+    "Name": "勁豐",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8081.TW",
+    "Name": "致新",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1473.TW",
+    "Name": "台南",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4995.TW",
+    "Name": "晶達",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8930.TW",
+    "Name": "青鋼",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1522.TW",
+    "Name": "堤維西",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2235.TW",
+    "Name": "謚源",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5315.TW",
+    "Name": "光聯",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3206.TW",
+    "Name": "志豐",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6585.TW",
+    "Name": "鼎基",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3026.TW",
+    "Name": "禾伸堂",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3014.TW",
+    "Name": "聯陽",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5546.TW",
+    "Name": "永固-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4305.TW",
+    "Name": "世坤",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8112.TW",
+    "Name": "至上",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2385.TW",
+    "Name": "群光",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1532.TW",
+    "Name": "勤美",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4527.TW",
+    "Name": "方土霖",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6122.TW",
+    "Name": "擎邦",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8410.TW",
+    "Name": "森田",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6538.TW",
+    "Name": "倉和",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1808.TW",
+    "Name": "潤隆",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6651.TW",
+    "Name": "全宇昕",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2227.TW",
+    "Name": "裕日車",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5215.TW",
+    "Name": "科嘉-KY",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3567.TW",
+    "Name": "逸昌",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3211.TW",
+    "Name": "順達",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6143.TW",
+    "Name": "振曜",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2488.TW",
+    "Name": "漢平",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "9940.TW",
+    "Name": "信義",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2535.TW",
+    "Name": "達欣工",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2504.TW",
+    "Name": "國產",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "3025.TW",
+    "Name": "星通",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8924.TW",
+    "Name": "大田",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6108.TW",
+    "Name": "競國",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8011.TW",
+    "Name": "台通",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1339.TW",
+    "Name": "昭輝",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8487.TW",
+    "Name": "愛爾達-創",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6754.TW",
+    "Name": "匯僑設計",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6670.TW",
+    "Name": "復盛應用",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4306.TW",
+    "Name": "炎洲",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "4440.TW",
+    "Name": "宜新實業",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8070.TW",
+    "Name": "長華*",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6201.TW",
+    "Name": "亞弘電",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1524.TW",
+    "Name": "耿鼎",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "8103.TW",
+    "Name": "瀚荃",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5015.TW",
+    "Name": "華祺",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "9924.TW",
+    "Name": "福興",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "6881.TW",
+    "Name": "潤德",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5520.TW",
+    "Name": "力泰",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "5609.TW",
+    "Name": "中菲行",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "1218.TW",
+    "Name": "泰山",
+    "Sector": "High Yield"
+  },
+  {
+    "Ticker": "2439.TW",
+    "Name": "美律",
+    "Sector": "High Yield"
+  }
+]

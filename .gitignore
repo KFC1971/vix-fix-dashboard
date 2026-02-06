@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data
+data/
+*.csv
+*.pdf
+*.log
+
+# Streamlit
+.streamlit/
+
+# Secrets (Just in case)
+secrets.toml
+.env
