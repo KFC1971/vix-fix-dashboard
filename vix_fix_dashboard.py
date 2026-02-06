@@ -630,6 +630,14 @@ with tab_results:
                             st.markdown("---")
                             st.subheader("🤖 AI Analyst Verdict")
                             
+                            # Helper for safe formatting
+                            def safe_val(val):
+                                try:
+                                    if val is None: return 0.0
+                                    return float(val)
+                                except:
+                                    return 0.0
+
                             if report_content:
                                 # Display Source if available
                                 if source_model:
@@ -646,8 +654,11 @@ with tab_results:
                                     # Standardized Metric Display
                                     ac1.metric("Action", action)
                                     
-                                    ac2.metric(label_fair, f"${ai_parsed_data.get('fair_value', 0):.2f}")
-                                    ac3.metric(label_buy, f"${ai_parsed_data.get('buy_below', 0):.2f}")
+                                    val_fair = safe_val(ai_parsed_data.get('fair_value'))
+                                    val_buy = safe_val(ai_parsed_data.get('buy_below'))
+                                    
+                                    ac2.metric(label_fair, f"${val_fair:.2f}")
+                                    ac3.metric(label_buy, f"${val_buy:.2f}")
                                     
                                     st.info(f"**Rationale:** {ai_parsed_data.get('rationale', 'See full report.')}")
                                 else:
