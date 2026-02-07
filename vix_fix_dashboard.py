@@ -140,8 +140,14 @@ def generate_ai_report(gemini_api_key, perplexity_api_key, prompt):
         genai.configure(api_key=gemini_api_key)
         for model_name in gemini_models:
             try:
-                # st.toast(f"Attempting Gemini Model: {model_name}...")
-                model = genai.GenerativeModel(model_name)
+                # Enabling Google Search Tool for fresh data access
+                # Note: Simply passing 'google_search_retrieval' tool string works in recent SDKs
+                try:
+                    model = genai.GenerativeModel(model_name, tools='google_search_retrieval')
+                except:
+                    # Fallback if tools not supported by model/SDK
+                    model = genai.GenerativeModel(model_name)
+                
                 response = model.generate_content(prompt)
                 if response.text:
                     return response.text, f"Gemini ({model_name})"
