@@ -734,14 +734,16 @@ with tab_results:
                                             # Safe Year Extraction
                                             scan_year = str(scan_date_display).split('-')[0]
                                             
-                                            **REQUIRED SEARCH QUERIES (Execute these internally):**
-                                            1. "{long_name} {selected_ticker} earnings report released before {scan_date_display}"
-                                            2. "{long_name} {selected_ticker} analyst rating {scan_year}"
-                                            3. "Taiwan Manufacturing PMI {scan_date_display}"
+                                            **REQUIRED SEARCH OPERATIONS:**
+                                            1. Search: "{long_name} {selected_ticker} earnings released before {scan_date_display}"
+                                            2. Search: "{long_name} {selected_ticker} price target {scan_date_display}"
+                                            3. Search: "{long_name} revenue outlook {scan_year}"
                                             
-                                            **DATA FALLBACK RULE**:
-                                            - If data for the exact date is missing, USE THE LATEST AVAILABLE DATA from before that date (e.g., previous quarter).
-                                            - DO NOT just say "Data not available". MAKE A REASONABLE ESTIMATE based on the trend found.
+                                            **STRICT TIME MACHINE RULES:**
+                                            - You represent an investor SITTING IN {scan_year}. 
+                                            - **DO NOT USE** any data, news, or price info from AFTER {scan_date_display}.
+                                            - **IF A SEARCH RESULT IS DATED AFTER {scan_date_display}, DISCARD IT IMMEDIATELY.**
+                                            - If exact data is missing, use the *most recent* data available *prior* to {scan_date_display}.
                                             """
                                             
                                             # --- CONDITIONAL VALUATION FRAMEWORK PROMPT ---
