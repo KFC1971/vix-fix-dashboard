@@ -730,20 +730,21 @@ with tab_results:
                                             As-At Date: {scan_date_display}
                                             Closing Price: ${hist_price:.2f}
                                             
-                                            **CRITICAL INSTRUCTION**:
-                                            You are an AI Analyst with access to historical internet archives.
-                                            You MUST perform a search to fill in the missing data for Part 1 and Part 2.
+                                            **OBJECTIVE**:
+                                            You are an Intelligence Officer retrieving filed reports from the archives.
+                                            You must find the *latest* data that was available to the public *before* {scan_date_display}.
                                             
-                                            **REQUIRED SEARCH OPERATIONS:**
-                                            1. Search: "{long_name} {selected_ticker} earnings released before {scan_date_display}"
-                                            2. Search: "{long_name} {selected_ticker} price target {scan_date_display}"
-                                            3. Search: "{long_name} revenue outlook {scan_year}"
+                                            **REQUIRED SEARCH OPERATIONS**:
+                                            1. Search: "{long_name} {selected_ticker} quarterly earnings report {scan_year}"
+                                            2. Search: "{long_name} {selected_ticker} investor presentation {scan_year}"
+                                            3. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
+                                            4. Search: "Taiwan Manufacturing PMI {scan_year} historical data"
                                             
-                                            **STRICT TIME MACHINE RULES:**
-                                            - You represent an investor SITTING IN {scan_year}. 
-                                            - **DO NOT USE** any data, news, or price info from AFTER {scan_date_display}.
-                                            - **IF A SEARCH RESULT IS DATED AFTER {scan_date_display}, DISCARD IT IMMEDIATELY.**
-                                            - If exact data is missing, use the *most recent* data available *prior* to {scan_date_display}.
+                                            **DATA HANDLING RULES**:
+                                            - **BEST AVAILABLE DATA**: If exact Q3 data is missing, use Q2. If Q2 is missing, use Q1.
+                                            - **NO FUTURE KNOWLEDGE**: Do not use data released *after* {scan_date_display}.
+                                            - **ESTIMATION**: If a specific number is not found, estimate it based on the trend of the previous 3 quarters found in your search.
+                                            - **CITATION**: Clearly state the date of the data you found (e.g., "Based on Q2 2024 report released in August...").
                                             """
                                             
                                             # --- CONDITIONAL VALUATION FRAMEWORK PROMPT ---
