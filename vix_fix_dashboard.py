@@ -89,10 +89,10 @@ def generate_perplexity_report(api_key, system_prompt):
         "Content-Type": "application/json"
     }
     
-    # Perplexity 'sonar-pro' works well. We send the whole system prompt as user content
+    # Perplexity 'sonar-reasoning' is better for deep research/financial data
     # or split it. Given the prompt structure, sending as 'user' message is safest for standard chat.
     payload = {
-        "model": "sonar-pro",
+        "model": "sonar-reasoning",
         "messages": [
             {
                 "role": "user", 
