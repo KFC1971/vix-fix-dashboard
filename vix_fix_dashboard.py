@@ -720,6 +720,9 @@ with tab_results:
                                             # Ensure we use the price from the scan date, not today
                                             hist_price = last_price # Calculated above from plot_data tail
                                             
+                                            # Safe Year Extraction
+                                            scan_year = str(scan_date_display).split('-')[0]
+
                                             # Construct Context
                                             market_context = f"""
                                             **HISTORICAL ANALYST TASK**:
@@ -730,9 +733,6 @@ with tab_results:
                                             **CRITICAL INSTRUCTION**:
                                             You are an AI Analyst with access to historical internet archives.
                                             You MUST perform a search to fill in the missing data for Part 1 and Part 2.
-                                            
-                                            # Safe Year Extraction
-                                            scan_year = str(scan_date_display).split('-')[0]
                                             
                                             **REQUIRED SEARCH OPERATIONS:**
                                             1. Search: "{long_name} {selected_ticker} earnings released before {scan_date_display}"
