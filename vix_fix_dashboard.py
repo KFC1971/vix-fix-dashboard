@@ -737,12 +737,12 @@ with tab_results:
                                             **REQUIRED SEARCH OPERATIONS**:
                                             1. Search: "{long_name} {selected_ticker} investor relations financial reports"
                                             2. Search: "TWSE {selected_ticker} financial report site:twse.com.tw"
-                                            3. Search: "{long_name} {selected_ticker} quarterly earnings {scan_year}"
+                                            3. Search: "{long_name} {selected_ticker} quarterly earnings yahoo finance {scan_year}"
                                             4. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
                                             5. Search: "Taiwan Manufacturing PMI {scan_year} historical data"
                                             
                                             **DATA HANDLING RULES**:
-                                            - **OFFICIAL SOURCE**: For Taiwan stocks, prioritize data from the Taiwan Stock Exchange (TWSE) or the company's Investor Relations page.
+                                            - **SOURCES**: Prioritize TWSE, Investor Relations, and Yahoo Finance.
                                             - **BEST AVAILABLE DATA**: If {scan_date_display} is in Q1, look for Q4 of previous year. If in Q4, look for Q3.
                                             - **EXAMPLE**: If today is Feb 2026 and Q4 2025 report is not out, YOU MUST USE THE Q3 2025 REPORT found on the investor relations page.
                                             - **NO FUTURE KNOWLEDGE**: Do not use data released *after* {scan_date_display}.
