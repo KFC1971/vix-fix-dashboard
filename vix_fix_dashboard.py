@@ -721,23 +721,24 @@ with tab_results:
                                             hist_price = last_price # Calculated above from plot_data tail
                                             
                                             # Construct Context
-                                            # Construct Context
                                             market_context = f"""
-                                            **HISTORICAL SNAPSHOT DATE**: {scan_date_display}
-                                            - Ticker: {selected_ticker} ({long_name})
-                                            - Closing Price on Date: ${hist_price:.2f}
-                                            - Sector: {info.get('sector', 'N/A')}
+                                            **HISTORICAL ANALYST TASK**:
+                                            Target: {selected_ticker} ({long_name})
+                                            As-At Date: {scan_date_display}
+                                            Closing Price: ${hist_price:.2f}
                                             
-                                            **MANDATORY RESEARCH INSTRUCTIONS:**
-                                            You are acting as a Time Machine Investor. You MUST SEARCH for and use data visible **AS OF {scan_date_display}**.
+                                            **CRITICAL INSTRUCTION**:
+                                            You are an AI Analyst with access to historical internet archives.
+                                            You MUST perform a search to fill in the missing data for Part 1 and Part 2.
                                             
-                                            1. **Search for Financials**: Find the latest Quarterly Earnings (Revenue, EPS, Margins) released *before* {scan_date_display}.
-                                            2. **Search for Macro**: Find the PMI, Inflation (CPI), and Interest Rate environment prevailing in {scan_date_display}.
-                                            3. **Search for Sentiment**: Find analyst consensus, upgrades/downgrades, and management guidance active on {scan_date_display}.
-
-                                            **CONSTRAINT**: 
-                                            - Ignore any events or data that happened AFTER {scan_date_display}.
-                                            - Base Part 1 and Part 2 analysis specifically on the search results found for that time period.
+                                            **REQUIRED SEARCH QUERIES (Execute these internally):**
+                                            1. "{long_name} {selected_ticker} earnings report released before {scan_date_display}"
+                                            2. "{long_name} {selected_ticker} analyst rating {scan_date_display.split('-')[0]}"
+                                            3. "Taiwan Manufacturing PMI {scan_date_display}"
+                                            
+                                            **DATA FALLBACK RULE**:
+                                            - If data for the exact date is missing, USE THE LATEST AVAILABLE DATA from before that date (e.g., previous quarter).
+                                            - DO NOT just say "Data not available". MAKE A REASONABLE ESTIMATE based on the trend found.
                                             """
                                             
                                             # --- CONDITIONAL VALUATION FRAMEWORK PROMPT ---
@@ -751,7 +752,11 @@ with tab_results:
 
 ## ROLE
 
-You are an **Institutional Quantitative Strategist and Equity Valuation Expert**.
+You are an **Institutional Quantitative Strategist**.
+Your goal is to provide a valuation report.
+
+**Override**: If exact financial data is missing, use TTM (Trailing Twelve Months) data found via search.
+
 
 Your task is to perform a **two-part equity valuation** of a specified US-listed stock using **only information that was publicly available _as at a specified date_**.
 
