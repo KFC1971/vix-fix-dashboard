@@ -735,16 +735,17 @@ with tab_results:
                                             You must find the *latest* data that was available to the public *before* {scan_date_display}.
                                             
                                             **REQUIRED SEARCH OPERATIONS**:
-                                            1. Search: "{long_name} {selected_ticker} quarterly earnings report {scan_year}"
-                                            2. Search: "{long_name} {selected_ticker} investor presentation {scan_year}"
+                                            1. Search: "{long_name} {selected_ticker} investor relations financial reports"
+                                            2. Search: "{long_name} {selected_ticker} quarterly earnings {scan_year}"
                                             3. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
                                             4. Search: "Taiwan Manufacturing PMI {scan_year} historical data"
                                             
                                             **DATA HANDLING RULES**:
-                                            - **BEST AVAILABLE DATA**: If exact Q3 data is missing, use Q2. If Q2 is missing, use Q1.
+                                            - **BEST AVAILABLE DATA**: If {scan_date_display} is in Q1, look for Q4 of previous year. If in Q4, look for Q3.
+                                            - **EXAMPLE**: If today is Feb 2026 and Q4 2025 report is not out, YOU MUST USE THE Q3 2025 REPORT found on the investor relations page.
                                             - **NO FUTURE KNOWLEDGE**: Do not use data released *after* {scan_date_display}.
-                                            - **ESTIMATION**: If a specific number is not found, estimate it based on the trend of the previous 3 quarters found in your search.
-                                            - **CITATION**: Clearly state the date of the data you found (e.g., "Based on Q2 2024 report released in August...").
+                                            - **ESTIMATION**: If a specific number is not found from the exact quarter, estimate it based on the TTM (Trailing Twelve Months) trend.
+                                            - **CITATION**: Clearly state the source date (e.g., "Using Q3 2025 data as Q4 was not yet released...").
                                             """
                                             
                                             # --- CONDITIONAL VALUATION FRAMEWORK PROMPT ---
