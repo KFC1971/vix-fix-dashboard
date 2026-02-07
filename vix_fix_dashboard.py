@@ -129,6 +129,8 @@ def generate_ai_report(gemini_api_key, perplexity_api_key, prompt):
     gemini_models = [
         'gemini-2.0-flash', 
         'gemini-2.0-flash-lite',
+        'gemini-flash-latest',
+        'gemini-pro-latest',
         'gemini-1.5-pro',
         'gemini-1.5-flash',
         'gemini-pro'
