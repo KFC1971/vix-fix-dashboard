@@ -750,13 +750,13 @@ with tab_results:
                                             **REQUIRED SEARCH OPERATIONS**:
                                             1. Search: "{long_name} {selected_ticker} {target_q_str} financial report"
                                             2. Search: "{long_name} {selected_ticker} investor presentation {scan_year}"
-                                            3. Search: "TWSE {selected_ticker} financial report site:twse.com.tw"
-                                            4. Search: "{long_name} {selected_ticker} quarterly earnings yahoo finance {scan_year}"
+                                            3. Search: "{long_name} {selected_ticker} {target_q_str} earnings news summary"
+                                            4. Search: "TWSE {selected_ticker} financial report site:twse.com.tw"
                                             5. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
-                                            4. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
-                                            5. Search: "Taiwan Manufacturing PMI {scan_year} historical data"
+                                            6. Search: "Taiwan Manufacturing PMI {scan_year} historical data"
                                             
                                             **DATA HANDLING RULES**:
+                                            - **RESILIENT EXTRACTION**: If the official PDF is not found, *YOU MUST* extract the key numbers (Revenue, EPS, Margins, Guidance) from news articles, financial news sites (CNBC, Bloomberg, Yahoo Finance), or summaries found in the search results.
                                             - **SOURCES**: Prioritize TWSE, Investor Relations, and Yahoo Finance.
                                             - **BEST AVAILABLE DATA**: If {scan_date_display} is in Q1, look for Q4 of previous year. If in Q4, look for Q3.
                                             - **EXAMPLE**: If today is Feb 2026 and Q4 2025 report is not out, YOU MUST USE THE Q3 2025 REPORT found on the investor relations page.
