@@ -89,26 +89,38 @@ def generate_perplexity_report(api_key, system_prompt):
         "Content-Type": "application/json"
     }
     
-    # Perplexity 'sonar-reasoning' is better for deep research/financial data
-    # or split it. Given the prompt structure, sending as 'user' message is safest for standard chat.
-    payload = {
-        "model": "sonar-reasoning",
-        "messages": [
-            {
-                "role": "user", 
-                "content": system_prompt
-            }
-        ]
-    }
+    # Try models in order of capability: Reasoning -> Pro -> Basic (Sonar)
+    models_to_try = ["sonar-reasoning", "sonar-pro", "sonar"]
+    last_error = ""
     
-    try:
-        response = requests.post(url, json=payload, headers=headers)
-        if response.status_code == 200:
-            return response.json()['choices'][0]['message']['content'], "Perplexity (sonar-pro)"
-        else:
-            return f"Perplexity Error {response.status_code}: {response.text}", "Error"
-    except Exception as e:
-        return f"Perplexity Request Failed: {str(e)}", "Error"
+    for model in models_to_try:
+        payload = {
+            "model": model,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a helpful financial research assistant."
+                },
+                {
+                    "role": "user", 
+                    "content": system_prompt
+                }
+            ]
+        }
+        
+        try:
+            # st.toast(f"Trying Perplexity model: {model}...")
+            response = requests.post(url, json=payload, headers=headers)
+            if response.status_code == 200:
+                return response.json()['choices'][0]['message']['content'], f"Perplexity ({model})"
+            else:
+                last_error = f"{model} Error {response.status_code}"
+                continue
+        except Exception as e:
+            last_error = f"{model} Exception: {str(e)}"
+            continue
+            
+    return f"Perplexity All Models Failed. Last Error: {last_error}", "Error"
 
 # Helper for AI Generation with Fallback
 def generate_ai_report(gemini_api_key, perplexity_api_key, prompt):
