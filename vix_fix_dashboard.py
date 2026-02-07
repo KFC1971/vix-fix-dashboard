@@ -122,43 +122,43 @@ def generate_perplexity_report(api_key, system_prompt):
             
     return f"Perplexity All Models Failed. Last Error: {last_error}", "Error"
 
-# Helper for AI Generation with Fallback
+# Helper for AI Generation with Fallback (Gemini Priority)
 def generate_ai_report(gemini_api_key, perplexity_api_key, prompt):
-    # 1. Try Gemini First
+    # 1. PRIORITY: Combine Gemini Models
+    # We try high-end models first, then faster/cheaper ones
+    gemini_models = [
+        'gemini-2.0-flash', 
+        'gemini-2.0-flash-lite',
+        'gemini-1.5-pro',
+        'gemini-1.5-flash',
+        'gemini-pro'
+    ]
+    
+    errors = []
+    
     if gemini_api_key:
         genai.configure(api_key=gemini_api_key)
-        models = [
-            'gemini-2.0-flash', 
-            'gemini-2.0-flash-lite',
-            'gemini-flash-latest',
-            'gemini-1.5-flash',
-            'gemini-pro'
-        ]
-        
-        errors = []
-        for model_name in models:
+        for model_name in gemini_models:
             try:
+                # st.toast(f"Attempting Gemini Model: {model_name}...")
                 model = genai.GenerativeModel(model_name)
                 response = model.generate_content(prompt)
                 if response.text:
                     return response.text, f"Gemini ({model_name})"
             except Exception as e:
-                errors.append(f"{model_name}: {str(e)}")
-                # If 429, we might want to break immediately to fallback? 
-                # But treating all errors same for simplicity.
+                errors.append(f"Gemini {model_name} Error: {str(e)}")
                 continue
     else:
-        errors = ["Gemini Key missing."]
+        errors.append("Gemini API Key missing.")
 
-    # 2. Fallback to Perplexity
+    # 2. FALLBACK: Perplexity AI (Deep Research)
     if perplexity_api_key:
-        # st.toast("Gemini failed, switching to Perplexity AI...") # Can't use streamlit here easily if inside cache? 
-        # Actually this function handles the call. We can return the result.
+        # st.toast("Gemini unavailable. Switching to Perplexity...")
         return generate_perplexity_report(perplexity_api_key, prompt)
 
     # If we get here, all failed
-    error_msg = "\n".join(errors)
-    raise Exception(f"Gemini failed (and no Perplexity Key provided).\nDetails:\n{error_msg}")
+    final_error = "\n".join(errors)
+    return f"AI Generation Failed.\n\nErrors:\n{final_error}", "Error"
 
 # Initialize Session State for Logs
 if 'scan_logs' not in st.session_state:
