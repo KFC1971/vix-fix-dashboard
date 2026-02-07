@@ -731,9 +731,12 @@ with tab_results:
                                             You are an AI Analyst with access to historical internet archives.
                                             You MUST perform a search to fill in the missing data for Part 1 and Part 2.
                                             
+                                            # Safe Year Extraction
+                                            scan_year = str(scan_date_display).split('-')[0]
+                                            
                                             **REQUIRED SEARCH QUERIES (Execute these internally):**
                                             1. "{long_name} {selected_ticker} earnings report released before {scan_date_display}"
-                                            2. "{long_name} {selected_ticker} analyst rating {scan_date_display.split('-')[0]}"
+                                            2. "{long_name} {selected_ticker} analyst rating {scan_year}"
                                             3. "Taiwan Manufacturing PMI {scan_date_display}"
                                             
                                             **DATA FALLBACK RULE**:
