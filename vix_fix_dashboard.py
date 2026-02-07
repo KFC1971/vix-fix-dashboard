@@ -721,14 +721,23 @@ with tab_results:
                                             hist_price = last_price # Calculated above from plot_data tail
                                             
                                             # Construct Context
+                                            # Construct Context
                                             market_context = f"""
                                             **HISTORICAL SNAPSHOT DATE**: {scan_date_display}
                                             - Ticker: {selected_ticker} ({long_name})
                                             - Closing Price on Date: ${hist_price:.2f}
                                             - Sector: {info.get('sector', 'N/A')}
                                             
-                                            Please ignore any real-time data from trained knowledge that is AFTER {scan_date_display}. 
-                                            Base all valuation only on the price level of ${hist_price:.2f}.
+                                            **MANDATORY RESEARCH INSTRUCTIONS:**
+                                            You are acting as a Time Machine Investor. You MUST SEARCH for and use data visible **AS OF {scan_date_display}**.
+                                            
+                                            1. **Search for Financials**: Find the latest Quarterly Earnings (Revenue, EPS, Margins) released *before* {scan_date_display}.
+                                            2. **Search for Macro**: Find the PMI, Inflation (CPI), and Interest Rate environment prevailing in {scan_date_display}.
+                                            3. **Search for Sentiment**: Find analyst consensus, upgrades/downgrades, and management guidance active on {scan_date_display}.
+
+                                            **CONSTRAINT**: 
+                                            - Ignore any events or data that happened AFTER {scan_date_display}.
+                                            - Base Part 1 and Part 2 analysis specifically on the search results found for that time period.
                                             """
                                             
                                             # --- CONDITIONAL VALUATION FRAMEWORK PROMPT ---
