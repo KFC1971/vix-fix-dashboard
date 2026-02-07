@@ -1,10 +1,11 @@
 import google.generativeai as genai
 import os
 
-# Use the key user provided in previous turns or ask for it. 
-# I will use the one hardcoded in the dashboard as default if available there.
-# "AIzaSyCoxeAZMO-ZoHeFw-WE8-tJ93CyJoHOmTs"
-api_key = "AIzaSyCoxeAZMO-ZoHeFw-WE8-tJ93CyJoHOmTs"
+# Use the key user provided in previous turns or ask for it.
+# I will use the one hardcoded in the dashboard as default # Test script to list Gemini models
+
+# Load API Key from environment or input
+api_key = os.environ.get("GEMINI_API_KEY", "YOUR_API_KEY_HERE")
 
 genai.configure(api_key=api_key)
 
