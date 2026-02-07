@@ -721,7 +721,19 @@ with tab_results:
                                             hist_price = last_price # Calculated above from plot_data tail
                                             
                                             # Safe Year Extraction
-                                            scan_year = str(scan_date_display).split('-')[0]
+                                            scan_dt = pd.to_datetime(scan_date_display)
+                                            scan_year = scan_dt.year
+                                            scan_month = scan_dt.month
+                                            
+                                            # Determine Likely Latest Financial Quarter
+                                            if scan_month in [1, 2, 3]:
+                                                target_q_str = f"Q3 {scan_year-1}" # Q4 usually not out until late March for TW
+                                            elif scan_month in [4, 5, 6]:
+                                                target_q_str = f"Q4 {scan_year-1}"
+                                            elif scan_month in [7, 8, 9]:
+                                                target_q_str = f"Q1 {scan_year}"
+                                            else:
+                                                target_q_str = f"Q2 {scan_year}"
 
                                             # Construct Context
                                             market_context = f"""
@@ -729,15 +741,18 @@ with tab_results:
                                             Target: {selected_ticker} ({long_name})
                                             As-At Date: {scan_date_display}
                                             Closing Price: ${hist_price:.2f}
+                                            Target Reporting Period: {target_q_str} or older
                                             
                                             **OBJECTIVE**:
                                             You are an Intelligence Officer retrieving filed reports from the archives.
-                                            You must find the *latest* data that was available to the public *before* {scan_date_display}.
+                                            You must find the *latest* financial report visible before {scan_date_display}.
                                             
                                             **REQUIRED SEARCH OPERATIONS**:
-                                            1. Search: "{long_name} {selected_ticker} investor relations financial reports"
-                                            2. Search: "TWSE {selected_ticker} financial report site:twse.com.tw"
-                                            3. Search: "{long_name} {selected_ticker} quarterly earnings yahoo finance {scan_year}"
+                                            1. Search: "{long_name} {selected_ticker} {target_q_str} financial report"
+                                            2. Search: "{long_name} {selected_ticker} investor presentation {scan_year}"
+                                            3. Search: "TWSE {selected_ticker} financial report site:twse.com.tw"
+                                            4. Search: "{long_name} {selected_ticker} quarterly earnings yahoo finance {scan_year}"
+                                            5. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
                                             4. Search: "{long_name} {selected_ticker} analyst ratings history {scan_year}"
                                             5. Search: "Taiwan Manufacturing PMI {scan_year} historical data"
                                             
